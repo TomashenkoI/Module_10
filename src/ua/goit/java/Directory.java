@@ -25,7 +25,7 @@ public class Directory {
         String inputedShiftOfLetter = scanner.nextLine();
         int shiftOfLetter = Integer.parseInt(inputedShiftOfLetter);
 
-        if (shiftOfLetter <= 26) {
+        if (shiftOfLetter <= 26 && shiftOfLetter > 0) {
             System.out.println();
             System.out.println("Files in the directory: ");
             System.out.println();
@@ -46,7 +46,7 @@ public class Directory {
             System.out.println(decryptedBuilder);
 
             } else{
-                System.out.println("Error: number should be less than 25!");
+                System.out.println("Error: number should be less than 25 and more than 0!");
             }
         }
     }

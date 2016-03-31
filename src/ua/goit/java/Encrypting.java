@@ -49,7 +49,7 @@ public class Encrypting {
         for (int i = 0; i < directory.size(); i++) {
             builder.append(directory.get(i) + "\n");
         }
-//
+
         TextEditing.textEditing(builder,alphabetSmallLetters,shiftedAlphabetSmallLetters,alphabetCapitalLetters, shiftedAlphabetCapitalLetters);
         return builder;
     }
