@@ -8,7 +8,7 @@ import java.util.List;
  * Created by 7 on 31.03.2016.
  */
 public class Decrypting {
-    public static StringBuilder decryptedBuilder(int shiftOfLetter, List<String> directory) {
+    public static StringBuilder decryptedBuilder(int shiftOfLetter, StringBuilder text) {
         List<Character> alphabetSmallLetters = new ArrayList<>();
         for (char c = 'a'; c <= 'z'; c++) {
             alphabetSmallLetters.add(c);
@@ -45,7 +45,7 @@ public class Decrypting {
             unShiftedAlphabetCapitalLetters.put(shiftingAlphabetCapitalLetters.get(a), alphabetCapitalLetters.get(a));
         }
 
-        StringBuilder builder = Encrypting.encryptedBuilder(shiftOfLetter, directory);
+        StringBuilder builder = Encrypting.encryptedBuilder(shiftOfLetter, text);
 
         TextEditing.textEditing(builder,alphabetSmallLetters,unShiftedAlphabetSmallLetters,alphabetCapitalLetters, unShiftedAlphabetCapitalLetters);
         return builder;
