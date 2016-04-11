@@ -21,6 +21,8 @@ public class Directory {
 
         System.out.println("Enter the text, which should be encrypted/decrypted and be saved in a file:");
         String enteredText = scanner.nextLine();
+            // Вводим контрольный текст
+        enteredText = "Hello World!";
         StringBuilder builder = new StringBuilder(enteredText);
 
 
@@ -42,12 +44,7 @@ public class Directory {
                 System.out.println(decryptedBuilder);
 
                 try {
-                    DataOutputStream out = new DataOutputStream(new BufferedOutputStream(new FileOutputStream("Module10_text.txt")));
-
-                    for (int i = 0; i < 1; i++){
-                        out.writeUTF(enteredText);
-                    }
-                    out.close();
+                    TextSaving.toTextSaving(enteredText,"Module10_text.txt");
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
