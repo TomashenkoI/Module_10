@@ -1,7 +1,6 @@
 package ua.goit.java;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -44,7 +43,7 @@ public class Directory {
                 System.out.println(decryptedBuilder);
 
                 try {
-                    TextSaving.toTextSaving(enteredText,"Module10_text.txt");
+                    TextWritingAndReading.toTextSaving(enteredText,"Module10_text.txt");
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (IOException e) {

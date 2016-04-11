@@ -12,13 +12,15 @@ import java.io.*;
 public class TextSavingTest {
 
     @Test
-    public void testToTextSaving() throws Exception {
+    public void testToTextWritingAndReading() throws Exception {
         String enteredText = "Hello World!";
-        StringBuilder builder1 = new StringBuilder(enteredText);
+        StringBuilder builder2 = new StringBuilder();
 
-        final FileInputStream in = new FileInputStream("Module10_text.txt");
-        StringBuilder builder2 = new StringBuilder(in.read());
+        FileReader in = new FileReader("Module10_text.txt");
 
-        Assert.assertEquals(builder1, builder2);
+        TextWritingAndReading.toReadingText(in, builder2);
+
+        System.out.println();
+        Assert.assertEquals(enteredText ,builder2);
     }
 }
